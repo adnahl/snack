@@ -1,17 +1,33 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-      colors: {
-        'light-blue': colors.lightBlue,
-        cyan: colors.cyan,
-      },
+    colors: {
+      gray: colors.coolGray,
+      blue: ['#130282'],
+      red: colors.rose,
+      pink: colors.fuchsia,
+      white: ['#f1f1f1'],
+      green: ['#45e6cb'],
     },
+    fontFamily: {
+      sans: ['Roboto', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    extend: {
+      borderColor: ['focus-visible'],
+      opacity: ['disabled'],
+    }
+  }
 }
