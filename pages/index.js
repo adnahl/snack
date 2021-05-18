@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import Banner from '../componets/banner'
+import Banner from '../componets/Banner'
 import Header from '../componets/Header'
+import Explore from '../componets/Explore'
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <Header />
 
       <Banner />
+
+      <Explore />
 
     </div>
   )

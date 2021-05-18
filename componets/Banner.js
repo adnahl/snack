@@ -13,7 +13,12 @@ function Banner() {
       <SwiperSlide key={`slide-${i}`} tag="li" >
 
         <style jsx global>{`
-
+          .swiper-container { 
+            background-color: white;
+            width: 100%;
+            height: 100%;
+          }
+          
           .swiper-container img { 
             width: 100%
           }
@@ -29,19 +34,22 @@ function Banner() {
     )
   }
 
-  {/*<Swiper navigation */ }
+  {/*<Swiper navigation ...> 
+      <style ...>
+        .swiper-button-prev,
+          .swiper-button-next {
+            color: #130282 !important;
+            text-shadow: 1px 1px 2px #fff;
+          }
+  */ }
 
   return (
     <Swiper id="main" tag="section" wrapperTag="ul"
       autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
       pagination={{ clickable: 'true', }} >
+
       <style jsx global>
         {`
-          .swiper-button-prev,
-          .swiper-button-next {
-            color: #130282 !important;
-            /*text-shadow: 1px 1px 2px #fff;*/
-          }
           .swiper-pagination-bullet {
             opacity: 0.3;
             background-color: #130282;
@@ -50,9 +58,9 @@ function Banner() {
           .swiper-pagination-bullet-active {
               opacity: 1;
           }
-
         `}
       </style>
+
       {slides}
     </Swiper>
   )

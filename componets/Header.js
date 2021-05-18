@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function Header() {
   return (
-    <header className="pt-2 text-white-0 mt-4 flex flex-col h-auto sm:flex-row m-5 justify-between items-center">
+    <header className="pt-2 text-white-0 mt-4 flex flex-col h-auto sm:flex-row m-2 justify-between items-center">
 
       <Link href="/">
         <a>
