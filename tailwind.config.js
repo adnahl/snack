@@ -3,10 +3,7 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   theme: {
     colors: {
-      gray: colors.coolGray,
       blue: ['#130282'],
-      red: colors.rose,
-      pink: colors.fuchsia,
       white: ['#f1f1f1'],
       green: ['#45e6cb'],
     },

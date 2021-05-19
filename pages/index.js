@@ -19,8 +19,11 @@ export default function Home() {
 
       <Banner />
 
-      <Explore />
+      <Explore CategoryName="Tendencias" />
 
+      <Explore CategoryName="Estrenos" />
+
+      <Explore CategoryName="Populares" />
 
 
     </div>

@@ -8,7 +8,7 @@ SwiperCore.use([Navigation, Pagination, Autoplay])
 function Banner() {
 
   const slides = []
-  for (let i = 101; i < 105; i++) {
+  for (let i = 1; i < 5; i++) {
     slides.push(
       <SwiperSlide key={`slide-${i}`} tag="li" >
 
@@ -17,15 +17,20 @@ function Banner() {
             /*background-color: white;*/
             width: 100%;
             height: 100%;
+            max-height: 640px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
           
           .swiper-container img { 
-            width: 100%
+            width: 100%;
           }
+
         `}</style>
 
         <img
-          src={`https://picsum.photos/id/${i}/1800/700`}
+          src={`/images/C${i}.png`}
           alt={`Slide-${i}`}
           loading={`lazy`}
 
@@ -37,15 +42,12 @@ function Banner() {
   return (
     <Swiper id="main" tag="section" wrapperTag="ul"
       autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
-      pagination={{ clickable: 'true', }} >
+      pagination={{ clickable: 'true', }}
+      className="mt-6 sm:mt-0"
+    >
 
       <style jsx global>
         {`
-          .swiper-button-prev,
-          .swiper-button-next {
-            color: #130282 !important;
-          }
-          
           .swiper-pagination-bullet {
             opacity: 0.3;
             background-color: #130282;
