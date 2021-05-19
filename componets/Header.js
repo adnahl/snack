@@ -18,7 +18,7 @@ function Header() {
         </a>
       </Link>
 
-      <div className="pt-2 flex flex-grow items-center justify-evenly lg:justify-end max-w-full sm:max-w-l">
+      <div className="pt-2 flex flex-grow items-center justify-evenly lg:justify-end max-w-full ">
         <HeaderItem Title="VIVO" Icon={VideoCameraIcon} />
         <HeaderItem Title="Notificaciones" Icon={BellIcon} />
         <HeaderItem Title="Perfil" Icon={UserIcon} />

@@ -1,86 +1,60 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Pagination } from 'swiper/core'
+import SwiperCore, { Navigation } from 'swiper'
 import 'swiper/swiper-bundle.css'
 import Image from 'next/image'
+import Card from '../componets/Card'
 
 
-SwiperCore.use([Pagination])
+SwiperCore.use([Navigation])
 
 function Explore() {
   return (
-    <div className="bg-blue-0 text-white-0 mt-8">
-      <Swiper slidesPerView={1} spaceBetween={1}
+    <div className="bg-blue-0 text-white-0 ml-2 mr-2 mt-8">
+
+      <h1>Tendencias</h1>
+
+      <Swiper
+        navigation={true}
+        slidesPerView={1}
+        spaceBetween={8}
         breakpoints={{
-          "640": {
-            "slidesPerView": 2,
-            "spaceBetween": 2
+          "512": {
+            "slidesPerView": 2
           },
           "768": {
-            "slidesPerView": 4,
-            "spaceBetween": 4
+            "slidesPerView": 3
           },
           "1024": {
-            "slidesPerView": 5,
-            "spaceBetween": 5
+            "slidesPerView": 4
+          },
+          "1472": {
+            "slidesPerView": 5
+          },
+          "2496": {
+            "slidesPerView": 6,
+            "spaceBetween": 9
           }
         }}
         className="mySwiper">
 
 
         <SwiperSlide>
-          <Image
-            src="/images/scont-1.png"
-            alt="Slide_1"
-            width={1024}
-            height={768}
-          />
+          <div className="transform transition duration-500 hover:scale-95">
+            <Card />
+          </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image
-            src="/images/scont-2.png"
-            alt="Slide_2"
-            width={1024}
-            height={768}
-          />
+          <div className="transform transition duration-500 hover:scale-95">
+            <Card />
+          </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image
-            src="/images/scont-3.png"
-            alt="Slide_3"
-            width={1024}
-            height={768}
-          />
+          <div className="transform transition duration-500 hover:scale-95">
+            <Card />
+          </div>
         </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            src="/images/scont-4.png"
-            alt="Slide_4"
-            width={1024}
-            height={768}
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            src="/images/scont-5.png"
-            alt="Slide_5"
-            width={1024}
-            height={768}
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            src="/images/scont-6.png"
-            alt="Slide_6"
-            width={1024}
-            height={768}
-          />
-        </SwiperSlide>
-
 
       </Swiper>
     </div>

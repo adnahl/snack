@@ -14,7 +14,7 @@ function Banner() {
 
         <style jsx global>{`
           .swiper-container { 
-            background-color: white;
+            /*background-color: white;*/
             width: 100%;
             height: 100%;
           }
@@ -34,15 +34,6 @@ function Banner() {
     )
   }
 
-  {/*<Swiper navigation ...> 
-      <style ...>
-        .swiper-button-prev,
-          .swiper-button-next {
-            color: #130282 !important;
-            text-shadow: 1px 1px 2px #fff;
-          }
-  */ }
-
   return (
     <Swiper id="main" tag="section" wrapperTag="ul"
       autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
@@ -50,6 +41,11 @@ function Banner() {
 
       <style jsx global>
         {`
+          .swiper-button-prev,
+          .swiper-button-next {
+            color: #130282 !important;
+          }
+          
           .swiper-pagination-bullet {
             opacity: 0.3;
             background-color: #130282;

@@ -3,6 +3,9 @@ import Banner from '../componets/Banner'
 import Header from '../componets/Header'
 import Explore from '../componets/Explore'
 
+import Card from '../componets/Card'
+
+
 export default function Home() {
   return (
     <div className="bg-blue-0 -mt-4">
@@ -17,6 +20,8 @@ export default function Home() {
       <Banner />
 
       <Explore />
+
+
 
     </div>
   )
