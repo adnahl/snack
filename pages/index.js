@@ -1,31 +1,42 @@
 import Head from 'next/head'
 import Banner from '../componets/Banner'
-import Header from '../componets/Header'
 import Explore from '../componets/Explore'
+import fetch from 'node-fetch'
 
-import Card from '../componets/Card'
-
-
-export default function Home() {
+export default function Home({ videos }) {
   return (
-    <div className="bg-blue-0 -mt-4">
+    <>
       <Head>
-        <title>Snack</title>
+        <title>{process.env.SITE_NAME}</title>
         <meta name="description" content="Let´s snack baby!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <main>
+        <Banner />
 
-      <Banner />
+        {/* Lista de videos */}
+        <Explore vid={videos} type="ms" CategoryName="My Snacks" />
+        <Explore vid={videos} type="ne" CategoryName="New" />
 
-      <Explore CategoryName="Tendencias" />
+        {/* Lista de shows */}
+        <Explore vid={videos} type="pr" CategoryName="Premier" />
+        <Explore vid={videos} type="po" CategoryName="Popular" />
 
-      <Explore CategoryName="Estrenos" />
+        {/* Lista de perfiles */}
 
-      <Explore CategoryName="Populares" />
-
-
-    </div>
+      </main>
+    </>
   )
+}
+
+
+export async function getStaticProps() {
+  const res = await fetch(`${process.env.API_SNACK}/videos`)
+  const videos = await res.json()
+
+  return {
+    props: { videos },
+  }
+
 }
