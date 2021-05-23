@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Header from '../componets/Header'
 import Banner from '../componets/Banner'
 import Explore from '../componets/Explore'
 import fetch from 'node-fetch'
@@ -13,15 +14,17 @@ export default function Home({ videos }) {
       </Head>
 
       <main>
-        <Banner />
+        <Header />
+
+        <Banner key="banner" />
 
         {/* Lista de videos */}
-        <Explore vid={videos} type="ms" CategoryName="My Snacks" />
-        <Explore vid={videos} type="ne" CategoryName="New" />
+        <Explore vid={videos} CategoryName="My Snacks" key="ms" />
+        <Explore vid={videos} CategoryName="New" key="ne" />
 
         {/* Lista de shows */}
-        <Explore vid={videos} type="pr" CategoryName="Premier" />
-        <Explore vid={videos} type="po" CategoryName="Popular" />
+        <Explore vid={videos} CategoryName="Premier" key="pr" />
+        <Explore vid={videos} CategoryName="Popular" key="po" />
 
         {/* Lista de perfiles */}
 
