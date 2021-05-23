@@ -460,7 +460,7 @@ export default (req, res) => {
         snacker: 'Miree',
         title: 'El Show de Miree',
         coverImage: 'C22.png',
-        chapterName: 'Bromas y Desafíos',
+        chapterName: 'A desconocidos "Osea... soy la otra"',
         pos: {
           season: 1,
           chapter: 8
@@ -482,7 +482,7 @@ export default (req, res) => {
         snacker: 'Miree',
         title: 'El Show de Miree',
         coverImage: 'C23.png',
-        chapterName: 'Pijamada',
+        chapterName: 'Fuera de control',
         pos: {
           season: 1,
           chapter: 9
@@ -504,15 +504,15 @@ export default (req, res) => {
         snacker: 'Miree',
         title: 'El Show de Miree',
         coverImage: 'C24.png',
-        chapterName: 'Confesiones',
+        chapterName: '¿Qué pasó con Ricky?',
         pos: {
           season: 1,
-          chapter: 10
+          chapter: 6
         },
         views: 55321,
         timeView: 53210098,
-        likes: 29510,
-        dislikes: 500,
+        likes: 2510,
+        dislikes: 50,
         tags: [
           'chicas',
           'tips',
@@ -526,14 +526,14 @@ export default (req, res) => {
         snacker: 'Miree',
         title: 'El Show de Miree',
         coverImage: 'C25.png',
-        chapterName: 'Mascotas Kawai',
+        chapterName: 'Me prefiere a mí!!!',
         pos: {
           season: 1,
-          chapter: 11
+          chapter: 2
         },
         views: 1321,
         timeView: 732100,
-        likes: 510,
+        likes: 310,
         dislikes: 10,
         tags: [
           'chicas',
