@@ -27,11 +27,11 @@ export default (req, res) => {
       },
       {
         id: 2,
-        snacker: 'Alex Sonta',
-        user: 'alexsonta',
-        title: 'Singing the dream',
+        snacker: 'Violeta Rex',
+        user: 'lavioleta',
+        title: 'A mad nigth show',
         coverImage: 'C2.png',
-        chapterName: 'Una hora antes del show',
+        chapterName: 'The mortal kiss',
         pos: {
           season: 1,
           chapter: 3
@@ -44,16 +44,19 @@ export default (req, res) => {
           'music',
           'concerts',
           'sogns',
-          'singing'
+          'singing',
+          'electronic',
+          'techno',
+          'party'
         ]
       },
       {
         id: 3,
-        snacker: 'Violeta Rex',
-        user: 'lavioleta',
-        title: 'A mad nigth show',
+        snacker: 'Alex Sonta',
+        user: 'alexsonta',
+        title: 'Singing the dream',
         coverImage: 'C3.png',
-        chapterName: 'The mortal kiss',
+        chapterName: 'Una hora antes del show',
         pos: {
           season: 1,
           chapter: 5
@@ -66,10 +69,7 @@ export default (req, res) => {
           'music',
           'concerts',
           'sogns',
-          'singing',
-          'electronic',
-          'techno',
-          'party'
+          'singing'
         ]
       },
       {
@@ -385,7 +385,7 @@ export default (req, res) => {
         snacker: 'Aleska Vera',
         title: 'Comedy Show',
         coverImage: 'C18.png',
-        chapterName: 'Are you kidding?',
+        chapterName: "I´m pregtmant",
         pos: {
           season: 3,
           chapter: 2

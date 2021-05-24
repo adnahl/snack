@@ -1,10 +1,14 @@
-import Link from "next/link";
+import Head from 'next/head'
+import Link from 'next/link'
 
 function About() {
   return (
-    <div>
+    <>
+      <Head>
+        <title>About | {process.env.SITE_NAME}</title>
+      </Head>
       <Link href="/"><a>HOME</a></Link>
-    </div>
+    </>
   )
 }
 

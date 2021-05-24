@@ -19,12 +19,12 @@ export default function Home({ videos }) {
         <Banner key="banner" />
 
         {/* Lista de videos */}
-        <Explore vid={videos} CategoryName="My Snacks" key="ms" />
-        <Explore vid={videos} CategoryName="New" key="ne" />
+        <Explore vid={videos} CategoryName="My Snacks" />
+        <Explore vid={videos} CategoryName="New" />
 
         {/* Lista de shows */}
-        <Explore vid={videos} CategoryName="Premier" key="pr" />
-        <Explore vid={videos} CategoryName="Popular" key="po" />
+        <Explore vid={videos} CategoryName="Premier" />
+        <Explore vid={videos} CategoryName="Popular" />
 
         {/* Lista de perfiles */}
 
