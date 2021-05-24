@@ -47,13 +47,11 @@ export default function Explore({ CategoryName, vid }) {
               `}
         </style>
 
-
         {
-
           vid.map((v) => (
-            <SwiperSlide>
+            <SwiperSlide key="1">
               <div className="transform transition duration-500 hover:scale-95">
-                <Card key={`${CategoryName}-${v.id}`} CategoryName={CategoryName} video={v} />
+                <Card video={v} CategoryName={CategoryName} />
               </div>
             </SwiperSlide>
           ))
