@@ -18,13 +18,16 @@ export default function Home({ videos }) {
 
         <Banner key="banner" />
 
-        {/* Lista de videos */}
+        {/* Lista de videos 
         <Explore vid={videos} CategoryName="My Snacks" />
+        */}
         <Explore vid={videos} CategoryName="New" />
 
-        {/* Lista de shows */}
+        {/* Lista de shows 
         <Explore vid={videos} CategoryName="Premier" />
         <Explore vid={videos} CategoryName="Popular" />
+        */}
+
 
         {/* Lista de perfiles */}
 

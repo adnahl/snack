@@ -1,11 +1,7 @@
 import Image from 'next/image'
 import Link from "next/link"
-import { PlayIcon } from '@heroicons/react/solid'
-
 
 function Card({ video, CategoryName }) {
-
-  const num = Math.round(Math.random() * (4) + 1)
 
   return (
     <div>
@@ -19,9 +15,11 @@ function Card({ video, CategoryName }) {
 
       <div className="relative">
 
-        <Link href={`/video/${video.id}`}>
+        <Link href={`/api/snacker/${video.id}/videos/`}>
           <a>
             <Image
+              key={video.id}
+              quality={50}
               src={`/images/${video.coverImage}`}
               alt="Image_1"
               width={910}
@@ -32,13 +30,17 @@ function Card({ video, CategoryName }) {
 
         <button className=" top-2 left-2 z-10 absolute flex flex-row items-center pb-4 hover:text-green-0 transform transition duration-500 hover:scale-110">
           <Image
-            src={`/images/snackers/Perfil${num}.jpg`}
+            key={`pfor${video.id}`}
+            quality={20}
+            src={`/images/snackers/Perfil${video.userId}.jpg`}
             width={24}
             height={24}
             className="rounded-full"
-            alt={video.snacker}
+            alt={video.userId}
           />
-          <h5 className=" pl-5 text-sm font-semibold bg-blue-0 rounded-r pr-2 -m-3 bg-opacity-50 ">{video.snacker}</h5>
+          <h5 className=" pl-5 text-sm font-semibold bg-blue-0 rounded-r pr-2 -m-3 bg-opacity-50 ">
+            {video.userId}
+          </h5>
         </button>
 
       </div>
@@ -49,23 +51,24 @@ function Card({ video, CategoryName }) {
         CategoryName == "My Snacks" ?
 
           <div className="text-sm flex flex-row justify-between">
+
             <button className="hover:text-green-0 transform transition duration-500 hover:scale-110 text-justify pr-4 ">
               {video.chapterName}
             </button>
             <div>
-              <h5 className="flex justify-end">{`S${video.pos.season}:C${video.pos.chapter}`}</h5>
+              <h5 className="flex justify-end">{`S${video.season}:C${video.chapter}`}</h5>
             </div>
           </div>
 
           : CategoryName == "New" ?
 
-            <div className="text-sm flex flex-row justify-between">
-              <button className="hover:text-green-0 transform transition duration-500 hover:scale-110 text-justify pr-4 ">
+            <div className="text-sm flex flex-row justify-between  pointer-events-none">
+              <h5 className="text-justify pr-4 ">
                 {video.chapterName}
-              </button>
-              <div>
-                <h5 className="flex justify-end">{`S${video.pos.season}:C${video.pos.chapter}`}</h5>
-              </div>
+              </h5>
+              <h5 className="flex justify-end">
+                {`S${video.season}:C${video.chapter}`}
+              </h5>
             </div>
 
             : ""
