@@ -1,9 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper'
+import SwiperCore, { Navigation, Pagination, Autoplay, Lazy } from 'swiper'
 import 'swiper/swiper-bundle.css'
 
-
-SwiperCore.use([Navigation, Pagination, Autoplay])
+SwiperCore.use([Navigation, Pagination, Autoplay, Lazy])
 
 function Banner() {
 
@@ -30,10 +29,8 @@ function Banner() {
         `}</style>
 
         <img
-          src={`/images/C${i}.png`}
+          src={`/images/C${i}.jpg`}
           alt={`Slide-${i}`}
-          loading={`lazy`}
-
         />
       </SwiperSlide>
     )

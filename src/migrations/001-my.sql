@@ -37,15 +37,15 @@ VALUES ('Violeta','Rex','violetarex','violetarex@mail.com');
 
 INSERT 
 INTO Video (title, coverImage, chapterName, tags, userId)
-VALUES ('Not Kidding','C1.png','I work here!','funny,comedy,jokes,pranks',1);
+VALUES ('Not Kidding','C1','I work here!','funny,comedy,jokes,pranks',1);
 
 INSERT
 INTO Video (title, coverImage, chapterName, tags, userId)
-VALUES ('A mad nigth show','C2.png','The mortal kiss','music,concert,sogn,singing,electronic,party',2);
+VALUES ('A mad nigth show','C2','The mortal kiss','music,concert,sogn,singing,electronic,party',2);
 
 INSERT
 INTO Video (title, coverImage, chapterName, season, chapter, tags, userId)
-VALUES ('Not Kidding','C1.png','Bye Bye Butterfly!',1,2,'funny,comedy,jokes,pranks]',1);
+VALUES ('Not Kidding','C1','Bye Bye Butterfly!',1,2,'funny,comedy,jokes,pranks]',1);
 
 
 -- DOWN

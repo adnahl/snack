@@ -20,7 +20,7 @@ function Card({ video, CategoryName }) {
             <Image
               key={video.id}
               quality={50}
-              src={`/images/${video.coverImage}`}
+              src={`/images/${video.coverImage}.jpg`}
               alt="Image_1"
               width={910}
               height={512}
