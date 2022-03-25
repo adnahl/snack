@@ -38,7 +38,7 @@ function Banner() {
 
   return (
     <Swiper id="main" tag="section" wrapperTag="ul"
-      autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
+      autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
       pagination={{ clickable: 'true', }}
       className="mt-6 sm:mt-0"
     >
