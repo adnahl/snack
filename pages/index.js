@@ -22,9 +22,11 @@ export default function Home({ videos }) {
         <Explore vid={videos} CategoryName="My Snacks" />
         <Explore vid={videos} CategoryName="New" />
 
-        {/* Lista de shows */}
+        {/* Lista de shows 
         <Explore vid={videos} CategoryName="Premier" />
         <Explore vid={videos} CategoryName="Popular" />
+        */}
+
 
         {/* Lista de perfiles */}
 

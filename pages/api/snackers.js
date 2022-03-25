@@ -10,14 +10,10 @@ async function openDb() {
   });
 }
 
-export default async function getVideo(req, res) {
+export default async function getSnacker(req, res) {
 
   const db = await openDb('./mydb.sqlite');
-  const video = await db.all('SELECT * FROM Video WHERE id=?', req.query.id)
+  const snackers = await db.all('SELECT * FROM Snacker')
 
-  if (video != "") {
-    res.status(200).json({ video })
-  } else {
-    res.status(300).json({ title: 'Error: Video Not Found' })
-  }
+  res.status(200).json({ snackers })
 }
